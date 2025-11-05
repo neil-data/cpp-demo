@@ -1,88 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Cyber Responder</title>
-  <link rel="stylesheet" href="ux.css" />
- 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Cyber Responder | Incident Response Chatbot</title>
+    
+    <link rel="stylesheet" href="ux.css" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <link rel="icon" type="image/jpeg" href="Blue Modern Cyber Technology Logo.jpg" />
 </head>
+
 <body>
-  <!-- Cursor Effects -->
-  <div id="cursor"></div>
-  <div id="cursor-blur"></div>
+    <div id="cursor" aria-hidden="true"></div>
+    <div id="cursor-blur" aria-hidden="true"></div>
 
-  <!-- Navbar -->
-  <div id="nav">
-    <img src = "Blue Modern Cyber Technology Logo.jpg">
-    <h4>Home</h4>
-    <h4>About</h4>
-    <h4>Chatbot</h4>
-    <h4>Contact</h4>
-  </div>
+    <nav id="nav" role="navigation">
+        <a href="#page1" aria-label="Go to Home" class="nav-logo-link">
+            <img src="Blue Modern Cyber Technology Logo.jpg" alt="Cyber Responder Logo" class="nav-logo" />
+        </a>
+        <div class="nav-links">
+            <a href="#page1">Home</a>
+            <a href="#about-us">About</a>
+            <a href="#features">Features</a> 
+            <a href="#chatbot-section">Chatbot</a>
+            <a href="#contact-page">Contact</a>
+        </div>
 
-  <!-- Background Video -->
-  <video autoplay loop muted src="Black Elegant Clean Smoke Motivational Quote Video.mp4"></video>
-
-  <!-- Main Section -->
-  <div id="main">
-    <section id="page1">
-      <h1>AI CYBER RESPONDER</h1>
-      <h2>Hackathon Project 2025</h2>
-      <p>
-        Empower cybersecurity responders with an intelligent chatbot assistant that helps detect, analyze, and mitigate cyber threats faster.
-      </p>
+        <button id="theme-toggle" title="Toggle Theme (Not implemented yet)">
+            <i class="fas fa-sun"></i>
+        </button>
+    </nav>
+    
+    <section id="page1" class="hero-section">
+        <video autoplay muted loop playsinline>
+            <source src="Blue Black Modern Futuristic Cyber Security Video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <h1 class="glitch" data-text="CYBER INCIDENT?">CYBER INCIDENT?</h1>
+            <p>Immediate, AI-Powered Action Plans. Respond in Seconds, Not Hours.</p>
+            <a href="#chatbot-section" class="cta-button">Engage AI Responder</a>
+        </div>
     </section>
 
-    <section id="about-us">
-      <img src="Blue Modern Cyber Technology Logo.jpg" alt="AI Bot" />
-      <div id="about-us-in">
-        <h3>About the Project</h3>
-        <p>
-          This AI-driven chatbot assists incident response teams by offering instant guidance on malware, phishing, and cybersecurity incidents — built for speed, accuracy, and scalability.
-        </p>
-      </div>
+    <section id="about-us" class="content-section">
+        <h2>About The AI Responder</h2>
+        <p>The <strong>AI Cyber Responder</strong> is your first line of defense, providing instant, structured incident response guidance, dramatically cutting down detection-to-response time. We simplify the complex world of security protocols into clear, prioritized action steps.</p>
     </section>
-  </div>
 
-  <!-- Chatbot Floating Button -->
-  <div class="chatbot-button">💬</div>
+    <section id="features" class="content-section">
+        <h2>Key Features</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Real-Time Triage</h3>
+                <p>Instantly analyze incident reports and categorize threats based on severity and potential impact.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Prioritized Actions</h3>
+                <p>Receive a clear, step-by-step action plan prioritized by High (H), Medium (M), and Low (L) urgency.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Contextual Guidance</h3>
+                <p>The AI provides tailored instructions based on your specific environment and the details of the incident.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Compliance Ready</h3>
+                <p>Ensure your initial response steps align with industry best practices and regulatory requirements.</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- Chatbot Window -->
-  <div class="chatbot-container">
-    <div class="chat-header">
-      <h3>AI Cyber Responder 🤖</h3>
-      <p>Ask me anything about cybersecurity!</p>
-    </div>
-    <div class="chat-body">
-      <div class="message bot">
-        <p>Hello! I’m your AI Cyber Responder. How can I help today?</p>
-      </div>
-    </div>
-    <div class="chat-input">
-      <input type="text" id="user-input" placeholder="Type your message..." />
-      <button id="send-btn">Send</button>
-    </div>
-  </div>
+    <!-- NEW LIVE THREAT FEED SECTION -->
+    <section id="live-threat-feed" class="content-section">
+        <h2>Live Threat Feed</h2>
+        <marquee behavior="scroll" direction="left" scrollamount="7">
+            🚨 Ransomware detected in European data center | 
+            ⚠️ Phishing attempt targeting finance department | 
+            🛡️ DDoS attack mitigated by firewall | 
+            🔒 Credential stuffing attempt blocked | 
+            🧠 AI detected suspicious login behavior | 
+            🔥 Malware outbreak contained in regional office | 
+            ⚠️ Data breach attempt stopped by endpoint protection | 
+            🚨 Unauthorized access attempt detected at midnight |
+            🛡️ Security patch successfully deployed across servers
+        </marquee>
+    </section>
+    <!-- END OF LIVE THREAT FEED -->
 
-  <!-- Footer -->
-  <div id="footer">
-    <div class="footer-container">
-      <div class="footer-brand">
-        <img src="Blue Modern Cyber Technology Logo.jpg" alt="Brand" />
-        <h3>Cyber Responder</h3>
-      </div>
-      <div class="footer-links">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-        <a href="#">Contact</a>
-      </div>
-    </div>
-    <p>© 2025 AI Cyber Responder Hackathon Project | All rights reserved.</p>
-  </div>
+    <section id="chatbot-section" class="content-section">
+        <h2>Start Your Response</h2>
+        <p>Click the chat icon to describe your suspected incident and immediately receive your action plan.</p>
+    </section>
 
-  <!-- JS File -->
-  <script src="uj.js"></script>
+    <section id="contact-page" class="content-section contact-section">
+        <h2>Connect With Our Security Experts</h2>
+        <p>Need dedicated enterprise support, strategic consulting, or immediate human assistance? Reach out to our team.</p>
+        
+        <div class="contact-details-grid">
+            <div class="contact-card">
+                <h3>Emergency Hotline</h3>
+                <p class="phone-number"><i class="fas fa-phone-alt"></i> <strong>+91 98765 43210</strong></p> 
+                <p>Call for urgent, high-severity incident escalation.</p>
+            </div>
+            <div class="contact-card">
+                <h3>General Inquiry</h3>
+                <p><i class="fas fa-envelope"></i> inquiry@airesponder.com</p>
+                <p>For partnership requests or general product questions.</p>
+            </div>
+        </div>
+        
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name / Organization" required>
+            <input type="email" placeholder="Email Address" required>
+            <textarea placeholder="Tell us how we can help..." rows="4" required></textarea>
+            <button type="submit" class="cta-button">Submit Inquiry</button>
+        </form>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="contact-info">
+                <h4>Contact</h4>
+                <p>Email: security@airesponder.com</p>
+                <p>Phone: <strong>+91 98765 43210</strong></p>
+            </div>
+            <div class="links">
+                <h4>Links</h4>
+                <a href="#page1">Home</a>
+                <a href="#about-us">About</a>
+                <a href="#features">Features</a>
+                <a href="#contact-page">Contact</a>
+            </div>
+        </div>
+        <p class="copyright">&copy; <strong>2025 All rights reserved.</strong> | AI Cyber Responder</p>
+    </footer>
+
+    <button class="chatbot-button" title="Open AI Cyber Responder">
+        <i class="fas fa-robot"></i>
+    </button>
+
+    <div id="chatbot-container" class="chatbot-container" aria-hidden="true">
+        <div class="chat-header">
+            <h3>AI Cyber Responder</h3>
+            <button class="close-chat-btn" title="Close Chatbot"><i class="fas fa-times"></i></button>
+        </div>
+        <div id="chat-messages" class="chat-messages">
+        </div>
+        <div class="chat-input-area">
+            <textarea id="user-input" placeholder="Describe the incident..." rows="1"></textarea>
+            <button id="send-btn" title="Send Message">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+        <div id="incident-actions" class="incident-actions">
+            <h4>Immediate Action Plan <i class="fas fa-exclamation-triangle"></i></h4>
+            <div id="actions-container" class="actions-container">
+                <p id="action-plan-placeholder" style="font-style: italic; color: #fff7;">No active incident. Start a conversation in the chatbot to generate a plan.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="uj.js"></script>
 </body>
 </html>
+
 
